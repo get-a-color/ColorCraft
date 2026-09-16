@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Generate beautiful color combinations for app UI, websites, branding and creative projects.">
+<title>ColorCraft — UI Color Combination Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-dot"></span>ColorCraft</div>
+  <div class="top-actions">
+    <button id="copyAllBtn" class="ghost-btn">Copy Palette</button>
+    <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">☾</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">UI COLOR DISCOVERY</p>
+    <h1>Describe a color.<br><span>Get a palette.</span></h1>
+    <p class="sub">Find ready-to-use color combinations for apps, websites, dashboards, posters and brands.</p>
+
+    <div class="generator-card">
+      <div class="input-row">
+        <input id="prompt" type="text" placeholder="Describe a color or mood — e.g. dark ocean blue, luxury gold..." autocomplete="off">
+        <button id="generateBtn" class="generate-btn">Generate <span>↗</span></button>
+      </div>
+      <div class="controls">
+        <label>Number of colors</label>
+        <div class="segmented" role="group" aria-label="Number of colors">
+          <button data-count="2">2</button>
+          <button data-count="3" class="active">3</button>
+          <button data-count="4">4</button>
+        </div>
+        <span class="hint">Pick 2–4 colors</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-slot top-ad">ADVERTISEMENT<br><small>AdSense placement</small></div>
+
+  <section class="result-section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">YOUR PALETTE</p>
+        <h2 id="paletteName">Midnight Ocean</h2>
+      </div>
+      <button id="shuffleBtn" class="outline-btn">↻ New combination</button>
+    </div>
+
+    <div id="palette" class="palette"></div>
+
+    <div class="usage-grid">
+      <div class="usage-card">
+        <span class="usage-icon">UI</span>
+        <div><strong>Suggested usage</strong><p id="usageText">Primary / Accent / Background</p></div>
+      </div>
+      <div class="usage-card">
+        <span class="usage-icon">Aa</span>
+        <div><strong>Text check</strong><p id="contrastText">Designed for practical UI pairing</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-slot mid-ad">ADVERTISEMENT<br><small>AdSense placement</small></div>
+
+  <section class="browse">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">EXPLORE</p>
+        <h2>Hundreds of combinations</h2>
+      </div>
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="2">2 Colors</button>
+        <button class="filter" data-filter="3">3 Colors</button>
+        <button class="filter" data-filter="4">4 Colors</button>
+      </div>
+    </div>
+    <div id="gallery" class="gallery"></div>
+  </section>
+
+  <div class="ad-slot bottom-ad">ADVERTISEMENT<br><small>AdSense placement</small></div>
+</main>
+
+<footer>
+  <div><strong>ColorCraft</strong> — color ideas made simple.</div>
+  <div>For UI • Web • Brand • Creative</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
